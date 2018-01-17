@@ -1,0 +1,32 @@
+Monk can only solve the problems that have difficulty level less than X . Now the rules are-
+
+Score of the student is equal to the maximum number of answers he/she has attempted without skipping a question.
+Student is allowed to skip just "one" question that will not be counted in the continuity of the questions.
+First Line contains Integer 
+Nthe number of questions and the maximum difficulty x
+
+
+import java.io.*;
+class Markans
+{
+    public static void main(String args[])throws IOException
+    {
+        BufferedReader in=new BufferedReader(new InputStreamReader(System.in));
+            int n=Integer.parseInt(in.readLine());
+            int x=Integer.parseInt(in.readLine());
+            int A[]=new int[n];
+            int i,c=0,f=0;
+            for(i=0;i<n;i++)
+            {A[i]=Integer.parseInt(in.readLine());}
+            i=0;
+            while(i<n&&f!=2)
+            {
+                if(A[i]<=x)
+                c++;
+                if(A[i]>x)
+                f++;
+                i++;
+            }
+            System.out.println(c);
+    }
+}
