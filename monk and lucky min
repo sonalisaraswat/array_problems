@@ -1,0 +1,39 @@
+the array is Lucky if the frequency of the minimum element is odd,
+
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+int main()
+{
+    int t;
+    cin>>t;
+    while(t>0)
+    {
+        int n,i,c=0;
+        cin>>n;
+        int A[n];
+        for(i=0;i<n;i++)
+        {
+            cin>>A[i];
+        }
+        sort(A,A+n);
+        for(i=0;i<n;i++)
+        {
+            if(A[i]==A[0])
+            c++;
+            else if(A[i]>A[0])
+            break;
+        }
+        if(c%2==1)
+        {
+            cout<<"Lucky"<<endl;
+        }
+        else
+        {
+            cout<<"Unlucky"<<endl;
+        }
+        t--;
+    }
+    return 0;
+}
