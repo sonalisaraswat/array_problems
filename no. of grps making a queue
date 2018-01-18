@@ -1,0 +1,20 @@
+ Groups come one by one and line up behind the already present queue. The groups have a strange way of arranging themselves. In a particular group, the group members arrange themselves in increasing order of their height(not necessarily strictly increasing).
+Swapy observes a long queue standing in front of the ATM near his house. Being a curious kid, he wants to count the total number of groups present in the queue waiting to withdraw money.
+
+#include <iostream>
+using namespace std;
+int main()
+{
+int n,x,y,c=1,l;
+cin>>n;
+cin>>x;
+for(int i=1;i<n;i++)
+{
+    cin>>y;
+    if(x>y)
+        c++;
+        x=y;
+}
+cout<<endl<<c<<endl;
+return 0;
+}
