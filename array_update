@@ -1,0 +1,30 @@
+increase value of each array element by 1. He wants each array element's value to become greater than or equal to K.
+input:test caes.Each test case has N= no. of array elements;K. Then the array elements.
+
+#include <iostream>
+#include <algorithm>
+using namespace std;
+int main()
+{
+int t;
+cin>>t;
+while(t>0)
+{
+int n,k,i,c=0;
+cin>>n>>k;
+int A[n];
+for(i=0;i<n;i++)
+{
+cin>>A[i];
+}
+sort(A,A+n);
+while(A[0]<k)
+{
+    c++;
+    A[0]=A[0]+1;
+}
+cout<<c<<endl;
+t--;
+}
+return 0;
+}
