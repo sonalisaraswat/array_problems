@@ -1,0 +1,32 @@
+all elements occurred thrice there except one element, which occurs just once.
+
+import java.util.*;
+class Achedin
+{
+public static void main(String args[])
+{
+Scanner sc=new Scanner(System.in);
+int t=sc.nextInt();
+while(t>0)
+{
+	int pos=0;
+int n=sc.nextInt();
+int A[]=new int[n+1];
+A[0]=-1;
+for(int i=1;i<=n;i++)
+{
+A[i]=sc.nextInt();
+}
+Arrays.sort(A);
+for(int i=0;i<n-1;i++)
+{
+	if(A[i]!=A[i+1]&&A[i+1]!=A[i+2])
+	pos=A[i+1];
+}
+if(A[n]!=A[n-1])
+pos=A[n];
+System.out.println(pos);
+t--;
+}
+}
+}
